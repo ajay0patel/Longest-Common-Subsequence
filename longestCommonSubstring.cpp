@@ -1,9 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define end "\n"
-#define ll long long int
-#define w(t) while(t--)
 
+int ans=INT_MIN;
 
 
 int lcs(string s1,string s2,int m,int n){
@@ -22,20 +20,13 @@ int lcs(string s1,string s2,int m,int n){
       
         else
             dp[i][j] = 0;  
+
+
+        //update answer
+        if(dp[i][j]>ans){ans=dp[i][j];}
+
         }  
     }  
-    int ans=INT_MIN;
-
-    for(int i=0;i<m;i++){
-        for(int j=0;j<n;j++){
-           // cout<<dp[i][j]<<" ";
-            if(dp[i][j]>ans){
-                ans=dp[i][j];
-            }
-        }
-        //cout<<end;
-    }
-    
     return ans;
 }
 
@@ -43,6 +34,7 @@ int main() {
 
     ios_base::sync_with_stdio(0);
     cin.tie(0);
+    cout.tie(0);
 
     string s1;
     cin>>s1;
