@@ -1,5 +1,6 @@
 //Longest Palindromic subsequences
-//use LCS ... string s1=input ,s2=rev(a)
+//use LCS ... string s1=input ,s2=rev(s1)
+//lps=lcs(s1,rev(s1))
 
 #include <bits/stdc++.h>
 using namespace std;
